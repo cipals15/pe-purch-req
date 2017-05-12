@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function() {
+  var c = this;
+	c.form = c.data.form;
+	
+	c.forms = [];
+	
+	c.newForm = function () {
+		c.forms.push({});
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>pe-multi-form</id>
+        <internal>false</internal>
+        <link/>
+        <name>Multi-form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function($sp) {
+	data.form = $sp.getForm('x_snc_pepr_requisition', -1);
+})($sp);]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-12 00:37:53</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>18edcf234faaf60022f40ccf0310c7ea</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>Multi-form</sys_name>
+        <sys_package display_value="Purchase Requisitions" source="x_snc_pepr">56664f6b4f6af60022f40ccf0310c7ce</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Purchase Requisitions">56664f6b4f6af60022f40ccf0310c7ce</sys_scope>
+        <sys_update_name>sp_widget_18edcf234faaf60022f40ccf0310c7ea</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-12 00:59:27</sys_updated_on>
+        <template><![CDATA[<widget id="widget-form" options="{table: 'x_snc_pepr_requisition', sys_id: '-1'}"></widget>
+<ul ng-repeat="form in c.forms">
+  <sp-model form_model="form" mandatory="mandatory"></sp-model>
+</ul>
+<button ng-click="c.newForm()">
+  Add a section (+)
+</button>]]></template>
+    </sp_widget>
+</record_update>
