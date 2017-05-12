@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
-        <client_script><![CDATA[function() {
+        <client_script><![CDATA[function(spUtil, $scope, $element, $timeout) {
   var c = this;
-	c.form = c.data.form;
-	
 	c.forms = [];
 	
+	c.mainFormExpanded = true;
+	
+	
+	
 	c.newForm = function () {
-		c.forms.push({});
+		spUtil.get('pe-multi-form', {action: 'get_sub_form'}).then(function(response){
+			c.forms.push(response.data.newForm);
+		});
 	}
+	
+	c.submit = function () {
+		var mainGlideForm = $element.find('div[form_model] div').scope().$parent.$parent.getGlideForm();
+		$timeout(function() {
+			mainGlideForm.submit('sysverb_update_and_stay');
+		});
+		console.log('aaa');
+		$scope.$broadcast('save_subform');
+	}
+	
+	$scope.$on('pepr.save.subform', function () {
+		console.log('bbb');
+	});
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>v-pane {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -27,7 +49,18 @@
         <public>false</public>
         <roles/>
         <script><![CDATA[(function($sp) {
-	data.form = $sp.getForm('x_snc_pepr_requisition', -1);
+	
+	if (input && input.action == 'get_sub_form') {
+		data.newForm = getSubForm();
+		return;
+	}
+	
+	data.mainForm = $sp.getForm('x_snc_pepr_requisition', '-1');
+	
+	function getSubForm() {
+		return $sp.getForm('x_snc_pepr_item', '-1');
+	}
+	
 })($sp);]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
@@ -35,7 +68,7 @@
         <sys_created_on>2017-05-12 00:37:53</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>18edcf234faaf60022f40ccf0310c7ea</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>157</sys_mod_count>
         <sys_name>Multi-form</sys_name>
         <sys_package display_value="Purchase Requisitions" source="x_snc_pepr">56664f6b4f6af60022f40ccf0310c7ce</sys_package>
         <sys_policy/>
@@ -43,14 +76,34 @@
         <sys_scope display_value="Purchase Requisitions">56664f6b4f6af60022f40ccf0310c7ce</sys_scope>
         <sys_update_name>sp_widget_18edcf234faaf60022f40ccf0310c7ea</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-05-12 01:14:11</sys_updated_on>
-        <template><![CDATA[<widget id="widget-form" options="{table: 'x_snc_pepr_requisition', sys_id: '-1'}"></widget>
-<ul ng-repeat="form in c.forms">
-  <sp-model form_model="form" mandatory="mandatory"></sp-model>
-</ul>
-<button ng-click="c.newForm()">
-  Add a section (+)
-</button>
-TEST TEST TEST]]></template>
+        <sys_updated_on>2017-05-12 07:06:37</sys_updated_on>
+        <template><![CDATA[<v-accordion class="vAccordion--default" multiple control="accordion">
+  <v-pane expanded="c.mainFormExpanded">
+    <v-pane-header>
+      New Purchase Requisition
+    </v-pane-header>
+    <v-pane-content>
+      <sp-model form_model="c.data.mainForm" mandatory="mandatory"></sp-model>
+    </v-pane-content>
+  </v-pane>
+  <v-pane ng-repeat="form in c.forms" expanded>
+    <v-pane-header>
+      Line <span ng-if="form._fields.line_number.value">{{::form._fields.line_number.value}}</span> - <span ng-if="form._fields.description.value">{{::form._fields.description.value}}</span>
+    </v-pane-header>
+    <v-pane-content>
+      <pepr-form pepr-sp-form="form"></pepr-form>
+    </v-pane-content>
+  </v-pane>
+</v-accordion>
+<button class="btn btn-default" ng-click="c.newForm()">Add an item</button>
+<button class="btn btn-primary" ng-click="c.submit()">Submit</button>
+
+
+
+
+
+
+
+]]></template>
     </sp_widget>
 </record_update>

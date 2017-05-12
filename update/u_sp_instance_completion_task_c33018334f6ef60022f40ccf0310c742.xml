@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="u_sp_instance_completion_task">
+    <u_sp_instance_completion_task action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">240094334f6ef60022f40ccf0310c75c</sp_column>
+        <sp_widget display_value="Completion Task">52ddcf094f1a3a0022f40ccf0310c798</sp_widget>
+        <sys_class_name>u_sp_instance_completion_task</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-12 05:27:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c33018334f6ef60022f40ccf0310c742</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Task title</sys_name>
+        <sys_package display_value="Purchase Requisitions" source="x_snc_pepr">56664f6b4f6af60022f40ccf0310c7ce</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Purchase Requisitions">56664f6b4f6af60022f40ccf0310c7ce</sys_scope>
+        <sys_update_name>u_sp_instance_completion_task_c33018334f6ef60022f40ccf0310c742</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-12 05:27:48</sys_updated_on>
+        <title>Task title</title>
+        <u_validation_script><![CDATA[(function isCompleted(){
+
+    /* The return value of this function will determine whether to show the
+     * "completed" tick next to the completion task. */
+
+    var completion = true;
+
+    return completion;
+}());]]></u_validation_script>
+        <u_warning_message_script><![CDATA[(function warnMessage(){
+
+    /* The return value of this function will determine what the warning
+     * message will be. Simply return a string from this function and it will
+      be shown below the title of the completion task. */
+
+    var message = 'Warning message';
+
+    return message;
+
+}());]]></u_warning_message_script>
+        <url>?id=index</url>
+        <widget_parameters/>
+    </u_sp_instance_completion_task>
+    <sys_translated_text action="delete_multiple" query="documentkey=c33018334f6ef60022f40ccf0310c742"/>
+</record_update>

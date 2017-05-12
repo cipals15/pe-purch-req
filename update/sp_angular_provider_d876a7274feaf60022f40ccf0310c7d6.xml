@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_angular_provider">
+    <sp_angular_provider action="INSERT_OR_UPDATE">
+        <name>peprForm</name>
+        <script><![CDATA[function peprForm ($timeout) {
+	
+	var template = '<sp-model form_model="peprSpForm" mandatory="mandatory"></sp-model>';
+	
+	function controller ($scope, $element) {
+		$scope.$on('pepr.save.subform', function() {
+			console.log(123);
+			var glideForm = $element.find('div[form_model]').scope().$parent.$parent.getGlideForm();
+			
+			$timeout(function() {
+				glideForm.submit('sysverb_update_and_stay');
+				console.log('saved subform');
+			});
+		});
+	}
+	
+	return {
+		restrict: 'E',
+		template: template,
+		scope: {
+			peprSpForm: '='
+		},
+		controller: ['$scope', '$element', controller]
+	};
+}]]></script>
+        <sys_class_name>sp_angular_provider</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-12 02:26:49</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>d876a7274feaf60022f40ccf0310c7d6</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_name>peprForm</sys_name>
+        <sys_package display_value="Purchase Requisitions" source="x_snc_pepr">56664f6b4f6af60022f40ccf0310c7ce</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Purchase Requisitions">56664f6b4f6af60022f40ccf0310c7ce</sys_scope>
+        <sys_update_name>sp_angular_provider_d876a7274feaf60022f40ccf0310c7d6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-12 07:08:18</sys_updated_on>
+        <type>directive</type>
+    </sp_angular_provider>
+</record_update>

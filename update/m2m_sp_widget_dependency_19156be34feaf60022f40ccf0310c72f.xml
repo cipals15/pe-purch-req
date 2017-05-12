@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="INSERT_OR_UPDATE">
+        <sp_dependency display_value="pe-v-accordion">e43327a34feaf60022f40ccf0310c799</sp_dependency>
+        <sp_widget display_value="Multi-form">18edcf234faaf60022f40ccf0310c7ea</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-05-12 02:19:16</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>19156be34feaf60022f40ccf0310c72f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pe-v-accordion.Multi-form</sys_name>
+        <sys_package display_value="Purchase Requisitions" source="x_snc_pepr">56664f6b4f6af60022f40ccf0310c7ce</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Purchase Requisitions">56664f6b4f6af60022f40ccf0310c7ce</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_19156be34feaf60022f40ccf0310c72f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-05-12 02:19:16</sys_updated_on>
+    </m2m_sp_widget_dependency>
+</record_update>

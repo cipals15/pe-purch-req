@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Purchase Item" max_length="40" name="x_snc_pepr_item" type="collection">
+        <element display="true" label="Description" max_length="40" name="description" type="string"/>
+        <element label="Line Number" max_length="40" name="line_number" type="integer"/>
+        <element label="Quantity" max_length="40" name="quantity" type="integer"/>
+        <element label="Requisition" max_length="32" name="requisition" reference="x_snc_pepr_requisition" type="reference"/>
+        <element label="Total Price" max_length="20" name="total_price" type="currency"/>
+        <element label="Unit Price" max_length="20" name="unit_price" type="currency"/>
+        <index name="index">
+            <element name="requisition"/>
+        </index>
+    </element>
+</database>
