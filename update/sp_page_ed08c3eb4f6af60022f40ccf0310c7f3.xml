@@ -2,6 +2,7 @@
 <record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
         <css/>
+        <draft>false</draft>
         <id>pepr-home</id>
         <internal>false</internal>
         <public>false</public>
@@ -10,7 +11,7 @@
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-12 00:12:18</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>ed08c3eb4f6af60022f40ccf0310c7f3</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>pepr-home</sys_name>

@@ -14,7 +14,7 @@
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-12 00:12:18</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>e108c3eb4f6af60022f40ccf0310c7f6</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>Home - Container 1</sys_name>
@@ -25,6 +25,7 @@
         <sys_update_name>sp_container_e108c3eb4f6af60022f40ccf0310c7f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2017-05-12 00:12:30</sys_updated_on>
+        <title/>
         <width>container</width>
     </sp_container>
 </record_update>

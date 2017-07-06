@@ -2,11 +2,11 @@
 <record_update table="sys_wizard_answer">
     <sys_wizard_answer action="INSERT_OR_UPDATE">
         <active>true</active>
-        <answer>Purchase Requisitions</answer>
+        <answer>Purchase Requisition</answer>
         <button_label/>
         <dependent_value/>
         <element/>
-        <name>Purchase Requisitions</name>
+        <name>Purchase Requisition</name>
         <next_question/>
         <order>100</order>
         <payload_name/>
@@ -14,19 +14,19 @@
         <roles/>
         <script/>
         <sys_class_name>sys_wizard_answer</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-05-12 00:44:03</sys_created_on>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2017-05-12 01:17:07</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>a24fcf634faaf60022f40ccf0310c788</sys_id>
+        <sys_id>c3d6d3ebdbeab6002a0a73b9bf961977</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Purchase Requisitions</sys_name>
+        <sys_name>Purchase Requisition</sys_name>
         <sys_package display_value="Purchase Requisitions" source="x_snc_pepr">56664f6b4f6af60022f40ccf0310c7ce</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Purchase Requisitions">56664f6b4f6af60022f40ccf0310c7ce</sys_scope>
-        <sys_update_name>sys_wizard_answer_a24fcf634faaf60022f40ccf0310c788</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-05-12 00:44:03</sys_updated_on>
+        <sys_update_name>sys_wizard_answer_c3d6d3ebdbeab6002a0a73b9bf961977</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2017-05-12 01:17:07</sys_updated_on>
         <table/>
         <target_url>x_snc_pepr_requisition.do</target_url>
         <type>1</type>

@@ -13,13 +13,14 @@
         <quick_start_config/>
         <sc_catalog/>
         <sc_catalog_page/>
+        <sc_category_page/>
         <sp_chat_queue/>
         <sp_rectangle_menu/>
         <sqanda_knowledge_base/>
         <sys_class_name>sp_portal</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-05-12 00:10:09</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>a667cfab4f6af60022f40ccf0310c73f</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>Purchase Requisitions</sys_name>
